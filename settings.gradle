@@ -1,3 +1,3 @@
-include ':http'
+include ':simple-networking'
 include ':app'
 rootProject.name = "Simple Networking"

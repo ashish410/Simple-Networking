@@ -1,4 +1,4 @@
-package com.simple.networking.http
+package com.simple.networking
 
 const val UTF_8 = "UTF-8"
 const val bufferSize = 1024 * 4

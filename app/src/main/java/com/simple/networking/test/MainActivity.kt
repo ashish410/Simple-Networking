@@ -3,8 +3,8 @@ package com.simple.networking.test
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.simple.networking.http.Http
-import com.simple.networking.http.JSONArrayListener
+import com.simple.networking.Http
+import com.simple.networking.JSONArrayListener
 import org.json.JSONArray
 import kotlin.concurrent.thread
 

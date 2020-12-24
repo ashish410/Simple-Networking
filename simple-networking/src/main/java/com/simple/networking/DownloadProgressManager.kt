@@ -1,6 +1,6 @@
-package com.simple.networking.http
+package com.simple.networking
 
-import com.simple.networking.http.ProgressListener.ResponseListener
+import com.simple.networking.ProgressListener.ResponseListener
 
 class DownloadProgressManager internal constructor(
     private val progressListener: ProgressListener,

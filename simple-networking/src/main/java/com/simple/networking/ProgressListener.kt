@@ -1,4 +1,4 @@
-package com.simple.networking.http
+package com.simple.networking
 
 interface ProgressListener {
     fun download(
