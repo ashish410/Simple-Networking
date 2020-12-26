@@ -3,6 +3,6 @@ package com.simple.networking
 import org.json.JSONObject
 
 interface JSONObjectListener {
-    fun onResponse(req: Http.Request?, res: JSONObject?)
-    fun onFailure(req: Http.Request?, res: Http.Response?, e: Exception?)
+    fun onResponse(res: JSONObject?)
+    fun onFailure(e: Exception?)
 }

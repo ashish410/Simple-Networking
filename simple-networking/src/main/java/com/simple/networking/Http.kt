@@ -132,23 +132,13 @@ object Http {
                 "TIME TAKEN FOR API CALL(MILLIS) : " + (System.currentTimeMillis() - reqTimeStamp)
             )
             if (jsonObjReqListener != null) {
-                if (e != null) jsonObjReqListener!!.onFailure(
-                    this@Request,
-                    resp,
-                    e
-                ) else jsonObjReqListener!!.onResponse(
-                    this@Request, resp?.asJSONObject()
-                )
+                if (e != null) jsonObjReqListener!!.onFailure(e)
+                else jsonObjReqListener!!.onResponse(resp?.asJSONObject())
                 return
             }
             if (jsonArrayRequestListener != null) {
-                if (e != null) jsonArrayRequestListener!!.onFailure(
-                    this@Request,
-                    resp,
-                    e
-                ) else jsonArrayRequestListener!!.onResponse(
-                    this@Request, resp?.asJSONArray()
-                )
+                if (e != null) jsonArrayRequestListener!!.onFailure(e)
+                else jsonArrayRequestListener!!.onResponse(resp?.asJSONArray())
                 return
             } else e?.printStackTrace()
         }
