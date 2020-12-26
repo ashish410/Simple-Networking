@@ -1,0 +1,29 @@
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from project.rootProject.path
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from project.rootProject.path
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.simple.networking'
+                artifactId = 'http'
+                version = android.defaultConfig.versionName
+
+                artifact sourcesJar
+                artifact javadocJar
+            }
+        }
+    }
+}

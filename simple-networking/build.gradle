@@ -1,6 +1,18 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
+    id 'com.getkeepsafe.dexcount'
+}
+
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+
+version = "${versionMajor}.${versionMinor}.${versionPatch}"
+
+repositories {
+    mavenLocal()
 }
 
 android {
@@ -11,7 +23,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -19,8 +31,15 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //Enable the proguard
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //Other parameters
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            zipAlignEnabled true
         }
     }
     compileOptions {
@@ -38,3 +57,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'

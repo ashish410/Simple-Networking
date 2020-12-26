@@ -19,3 +19,20 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keepparameternames
+-keepattributes *Annotation*,Exceptions,InnerClasses,Signature
+
+-keep public class com.simple.networking.Http {
+   public *;
+   protected *;
+   <methods>;
+}
+
+-keep public class com.simple.networking.Http$Request {
+   public *;
+   protected *;
+   <methods>;
+}
+
+-keep public interface com.simple.networking.JSONObjectListener {*;}
+-keep public interface com.simple.networking.JSONArrayListener {*;}
