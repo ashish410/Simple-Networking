@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
                 .url("https://jsonplaceholder.typicode.com/users")
                 .enableLog(true)
                 .execute(object : JSONArrayListener {
-                    override fun onResponse(req: Http.Request?, res: JSONArray?) {
+                    override fun onResponse(res: JSONArray?) {
                         Log.d("MainActivity", res.toString())
                     }
 
-                    override fun onFailure(req: Http.Request?, res: Http.Response?, e: Exception?) {
+                    override fun onFailure(e: Exception?) {
                         Log.d("MainActivity", e.toString())
                     }
                 })
