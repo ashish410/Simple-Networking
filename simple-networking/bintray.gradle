@@ -8,10 +8,10 @@ bintray {
     key = properties.getProperty("bintrayApiKey")
     publications = ['release']
     pkg {
-        repo = 'SimpleNetworking'
+        repo = 'SimpleAndroidNetworking'
         name = 'com.simple.networking' //BINTRAY PACKAGE NAME
-        userOrg = 'simple1'
-        vcsUrl = 'https://github.com/ay3524/WallTime.git' // GIT REPO
+        userOrg = 'simple-android-libs'
+        vcsUrl = 'https://github.com/ashish410/Simple-Networking.git' // GIT REPO
         licenses = ["Apache-2.0"] // A LIST OF LICENCES
         publish = true
         publicDownloadNumbers = true
