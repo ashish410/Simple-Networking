@@ -61,6 +61,44 @@ repositories {
             })
 ```
 
+### Making a Request with header
+```java
+        Http.Request(Http.GET)
+            .url("https://jsonplaceholder.typicode.com/users")
+            .header("k1", "v1")
+            .header("k2", "v2")
+            .enableLog(true)
+            .execute(object : JSONArrayListener {
+                override fun onResponse(res: JSONArray?) {
+                    Log.d("MainActivity", res.toString())
+                }
+
+                override fun onFailure(e: Exception?) {
+                    Log.d("MainActivity", e.toString())
+                }
+            })
+```
+
+### Making a Request with header (or using map)
+```java
+        val headerMap: HashMap<String, String> = HashMap()
+        headerMap["k1"] = "v1"
+        headerMap["k2"] = "v2"
+        Http.Request(Http.GET)
+            .url("https://jsonplaceholder.typicode.com/users")
+            .header(headerMap)
+            .enableLog(true)
+            .execute(object : JSONArrayListener {
+                override fun onResponse(res: JSONArray?) {
+                    Log.d("MainActivity", res.toString())
+                }
+
+                override fun onFailure(e: Exception?) {
+                    Log.d("MainActivity", e.toString())
+                }
+            })
+```
+
 ### Making a POST Request
 ```java
         val js = JSONObject()
