@@ -24,7 +24,7 @@ Add this in your project/build.gradle
 ```groovy
 repositories {
     maven {
-        url "url  "https://simple-android-libs.bintray.com/SimpleAndroidNetworking"
+        url "https://simple-android-libs.bintray.com/SimpleAndroidNetworking"
     }
 }
 ```
