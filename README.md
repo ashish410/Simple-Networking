@@ -5,7 +5,7 @@
 ## About The Project
 
 A very simple android networking library. It is built entirely in kotlin. Internals are not complex for this library, it simply uses HttpURLConnnection. But it does proper thread management. Just make request and listen for the response. <br> 
-This project was part of my first article on medium. Here is the article [link](https://medium.com/@ay3524/build-a-simple-networking-library-in-android-3ec67a515a8e)
+This project was part of my first article on medium. Here is the article [link](https://ashish1.medium.com/build-a-simple-networking-library-in-android-3ec67a515a8e)
 
 
 ## Requirements
@@ -160,5 +160,5 @@ repositories {
 
 ### Contact - Let's become friend
 - [Twitter](https://twitter.com/ashishy410)
-- [Medium](https://medium.com/@ay3524)
+- [Medium](https://ashish1.medium.com/)
 - [LinkedIn](https://www.linkedin.com/in/ay3524)
